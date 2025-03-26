@@ -290,7 +290,8 @@ class Matrix():
                     matrix[i] = sum([vec_1[k] * vec_2[k] for k in range(self.cols)])
         if len(matrix) == 1 and isinstance(matrix[0], list): matrix = matrix[0]
         return Matrix(matrix, f"({self.name}) * ({other.name})")
-    
+
+    # division of two matrices
     def __truediv__(self, other):
         if isinstance(other, int) or isinstance(other, float) or isinstance(other, Fraction):
             matrix = [[Fraction((self.matrix[i][j] if isinstance(self.matrix[i], list) else self.matrix[j]))/Fraction(other) for j in range(self.cols)] for i in range(self.rows)]
