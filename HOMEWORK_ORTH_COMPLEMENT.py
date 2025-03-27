@@ -19,11 +19,11 @@ def main():
     print(f"{'':=^50}")
 
     print(f"{'NULLSPACE OF THE GIVEN MATRIX (N(A) ⟂ C(A^T))':=^50}")
-    A.nullspace().print_matrix()
+    A.nullspace().T().print_matrix()
     print(f"{'':=^50}")
 
     print(f"{'LEFT NULLSPACE OF THE GIVEN MATRIX (N(A^T) ⟂ C(A))':=^50}")
-    A.left_nullspace().print_matrix()
+    A.left_nullspace().T().print_matrix()
     print(f"{'':=^50}")
 
     print(f"{'ROW SPACE (BASIS) OF THE GIVEN MATRIX (C(A^T) ⟂ N(A))':=^50}")
